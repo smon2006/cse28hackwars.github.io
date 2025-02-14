@@ -1,2 +1,1 @@
-[hack.html
-](https://github.com/smon2006/smon2006.github.io/blob/m/hack.html)
+file:///C:/Users/SHRESTHA%20MONDAL/OneDrive/Desktop/coding/hack/homepage.html
