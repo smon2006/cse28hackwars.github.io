@@ -1,0 +1,33 @@
+body {
+  background-image: url("Budget_image.jpg");
+  background-size: cover;
+  padding: 20px 200px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.content {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 40px 30px;
+  font-size: 25px;
+  padding: 20px 100px 80px;
+  border-radius: 15px;
+  border: 1px solid rgba(29, 27, 35, 0.674);
+  box-shadow: inset;
+}
+h2 {
+  display: block;
+  text-align: center;
+  text-align: left;
+  margin-bottom: 40px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  line-height: 80px;
+}
+a:-webkit-any-link {
+  color: rgb(9, 86, 220);
+  cursor: pointer;
+  text-decoration: underline;
+}
