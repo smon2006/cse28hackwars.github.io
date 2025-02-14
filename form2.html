@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body {
+            background-color: rgb(97, 184, 212);
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+        button {
+            background-color: rgb(97, 184, 212);
+            border: 1px solid #777;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Fill Your Basic Details</h1>
+    <!-- Create Form -->
+    <form id="form">
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+            <input type="text" id="name" placeholder="Enter your full name" />
+        </div>
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+            <input type="email" id="email" placeholder="Enter your Email adress" />
+        </div>
+        <div class="form-control">
+            <label for="number" id="label-number">
+                Mobile Number
+            </label>
+            <input type="number" id="number" placeholder="Enter Your Mobile Number" />
+        </div>
+        <div class="form-control">
+            <label for="budget" id="label-budget">
+                Set your Budget goal for this Month
+            </label>
+            <input type="number" id="budget" placeholder="Enter your Budget for this Month" />
+        </div>
+        <div class="form-control">
+            <label for="startDate" id="label-startDate">
+                Starting Date
+            </label>
+            <input type="date " id="startDate" placeholder="Enter starting date of the month" />
+        </div>
+        <div class="form-control">
+            <label for="duration" id="label-duration">
+                Duration of your goal
+            </label>
+            <input type="number" id="duration" placeholder="Enter the duration of your goal" />
+        </div>
+        <div class="form-control">
+            <label for="username" id="label-username">
+                Username
+            </label>
+            <input type="text" id="username" placeholder="Create your username" />
+        </div>
+        <div class="form-control">
+            <label for="password" id="label-password">
+                Password
+            </label>
+            <input type="password" id="password" placeholder="Create your password" />
+        </div>
+        <div class="form-control">
+            <label for="passwordCnform" id="label-passwordCnform">
+                Password Conformation
+            </label>
+            <input type="password" id="passwordConform" placeholder="Conform your password" />
+        </div>
+        <button type="submit" value="submit">
+            Let's track your Budget
+        </button>
+    </form>
+</body>
+
+</html>
