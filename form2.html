@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -125,8 +125,22 @@
             Login
         </a>
     </form>
+    <script>
+        const form = document.getElementById('form');
+        const name = document.getElementById('name');
+        const budget = document.getElementById('budget');
+        const duration = document.getElementById('duration');
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          const nameValue = name.value;
+          const budgetValue = budget.value;
+          const durationValue = duration.value;
+          localStorage.setItem('name', nameValue);
+          localStorage.setItem('budget', budgetValue);
+          localStorage.setItem('duration', durationValue);
+          window.location.href="3rdpage.html";
+        }) 
+    </script>
 </body>
 
 </html>
-   
-           
