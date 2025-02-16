@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Insurance</title>
+    <style>
+      body {
+        padding: 20px 400px;
+        background: linear-gradient(
+          90deg,
+          rgba(70, 35, 2, 1) 0%,
+          rgba(9, 39, 121, 1) 0%,
+          rgba(19, 8, 140, 1) 0%,
+          rgba(3, 159, 218, 0.10136554621848737) 15%,
+          rgba(255, 0, 224, 0.25262605042016806) 100%
+        );
+      }
+      h1 {
+        color: rgb(193, 64, 225);
+        text-align: center;
+        text-decoration: underline;
+      }
+      .discount {
+        text-decoration: dotted;
+        font-family: cursive;
+        text-align: center;
+      }
+      button {
+        font-size: 30px;
+        color: aliceblue;
+        display: block;
+        margin: 20px auto;
+        padding: 20px 250px;
+        border-radius: 20px;
+        background-color: rgb(160, 23, 240);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        color: rgb(160, 23, 240);
+        background-color: whitesmoke;
+        border: 0.5 solid rgb(160, 23, 240);
+        width: 600px;
+      }
+      .page {
+        background-color: rgba(230, 188, 225, 0.455);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: rgb(rgb(176, 168, 168), rgb(55, 55, 55), rgb(69, 69, 72));
+      }
+      .content {
+        line-height: 35px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <h1>A term plan that puts your family first</h1>
+      <span class="discount">10% digital discount + 5% salaried discount</span>
+      <ul>
+        <li>Get 100% premium back</li>
+        <li>99.13% Individual death claim settlement ratio</li>
+        <li>Tax benefits up to ₹46,800</li>
+      </ul>
+      <div class="content">
+        <hr />
+        <h2>Term Insurance calculator</h2>
+        <hr />
+        <form action="">
+          <label for="name">Full Name</label>
+          <br />
+          <input type="text" placeholder="Enter your full name" required />
+          <br />
+          <label for="dob">Date of birth</label>
+          <br />
+          <input type="date" placeholder="DD/MM/YY" required />
+          <br />
+          <label for="email">Email ID</label>
+          <br />
+          <input type="email" placeholder="Enter email ID" required />
+          <br />
+          <label for="number">Mobile Number</label>
+          <br />
+          <input type="number" placeholder="+91 Enter Mobile Number" required />
+          <br />
+          <label for="gender">Gender</label>
+          <br />
+          <input type="text" placeholder="Enter your gender" required />
+          <br />
+          <label for="">Tobacco consumption</label>
+          <br />
+          <input type="text" placeholder="YES/NO" required />
+          <div>
+            <label for="">Policy Term</label>
+
+            <input
+              type="number"
+              select
+              number="number"
+              placeholder="Please enter a valid range"
+              required />
+          </div>
+          <div>
+            <label for="">Sum Assured</label>
+
+            <input
+              type="number"
+              select
+              number="number"
+              placeholder="Please enter value"
+              required />
+          </div>
+          <div>
+            <label for="">Annual Income</label>
+
+            <input
+              type="number"
+              select
+              number="number"
+              placeholder="Please enter value in lpa"
+              required />
+          </div>
+          <div>
+            <label for="">Payment Mode</label>
+
+            <input
+              type="text"
+              select
+              text="text"
+              placeholder="Monthly/Annual"
+              required />
+          </div>
+        </form>
+      </div>
+      <button>Calculate Premium</button>
+    </div>
+  </body>
+</html>
