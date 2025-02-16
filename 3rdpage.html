@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body{
+            background-image: url(https://media.istockphoto.com/id/465375462/photo/financial-background.jpg?s=1024x1024&w=is&k=20&c=vXyAkS6b4H3w8Lf2Pa_7UGLnBxN9TRKdzL1ehmQyaAQ=);
+        }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <span class="content">
+        <h2>Your Current Scenerio is</h2>
+        <div id="name1">Full Name:<br><span id="name"></span></div>
+        <div id="budget1">Budget in rupee:<br><span id="budget"></span></div>
+        <div id="duration1">Duration in days:<br><span id="duration"></span></div>
+        <div class="save">Expenditure: <br />Saving: <br /> Budget bar:</div>
+
+        <ul class="tasks">
+            <li>
+                💰
+                <a href="loans.html" target="_blank"> Loans</a>
+            </li>
+            <li>
+                ❤️‍🩹
+                <a href=""> Life Insurances</a>
+            </li>
+            <li>
+                💸
+                <a href=""> Investments</a>
+            </li>
+            <li>
+                🪙
+                <a href=""> Gold Loan</a>
+            </li>
+            <!-- <li></li>
+      <li></li> -->
+        </ul>
+    </span>
+    <script>
+       const name = localStorage.getItem('name');
+       const budget = localStorage.getItem('budget');
+       const duration = localStorage.getItem('duration');
+       document.getElementById('name').textContent = name;
+       document.getElementById('budget').textContent = budget;
+       document.getElementById('duration').textContent = duration;                                
+    </script>
+</body>
+   
+</html>
