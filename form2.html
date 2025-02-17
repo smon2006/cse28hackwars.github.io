@@ -10,7 +10,8 @@
             background-image: url(https://media.istockphoto.com/id/943331302/photo/finance-and-investment-concept.jpg?s=612x612&w=0&k=20&c=bpNh-V-f1DSf5dQ1EiVZNpq9eYN5_gpyrDXVZuPfc1c=);
             text-align: center;
         }
-        body{
+
+        body {
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -121,7 +122,7 @@
         </button>
         <p>
             Are you already a user?
-        </p><a href="loginPage.html" >
+        </p><a href="loginPage.html">
             Login
         </a>
     </form>
@@ -130,17 +131,19 @@
         const name = document.getElementById('name');
         const budget = document.getElementById('budget');
         const duration = document.getElementById('duration');
-        form.addEventListener('submit', function(e){
-          e.preventDefault();
-          const nameValue = name.value;
-          const budgetValue = budget.value;
-          const durationValue = duration.value;
-          localStorage.setItem('name', nameValue);
-          localStorage.setItem('budget', budgetValue);
-          localStorage.setItem('duration', durationValue);
-          window.location.href="3rdpage.html";
-        }) 
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nameValue = name.value;
+            const budgetValue = budget.value;
+            const durationValue = duration.value;
+            localStorage.setItem('name', nameValue);
+            localStorage.setItem('budget', budgetValue);
+            localStorage.setItem('duration', durationValue);
+            window.location.href = "3rdpage.html";
+
+        })
+        
     </script>
 </body>
-
 </html>
+    
