@@ -3,9 +3,30 @@
 
 <head>
     <style>
-        body{
+        body {
             background-image: url(https://media.istockphoto.com/id/465375462/photo/financial-background.jpg?s=1024x1024&w=is&k=20&c=vXyAkS6b4H3w8Lf2Pa_7UGLnBxN9TRKdzL1ehmQyaAQ=);
         }
+        .bu{
+            position:relative;
+            margin-left: 1000px;
+            background-color: rgb(243, 84, 84);
+            padding: 5px 10px;
+            border-radius: 25px;
+        }
+        .progress-bar {
+         width: 750px;
+         height: 20px;
+         background-color: #f0f0f0 ;
+         border-radius: 10px;
+         overflow: hidden;
+         margin:40px;
+}
+
+.progress-bar-fill {
+height: 100%;
+background-color: rgb(103, 103, 238);
+transition: width 0.3s;
+}
     </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,13 +35,19 @@
 </head>
 
 <body>
+
+    <button class="bu">LOGOUT</button>
+
     <span class="content">
         <h2>Your Current Scenerio is</h2>
         <div id="name1">Full Name:<br><span id="name"></span></div>
         <div id="budget1">Budget in rupee:<br><span id="budget"></span></div>
         <div id="duration1">Duration in days:<br><span id="duration"></span></div>
-        <div class="save">Expenditure: <br />Saving: <br /> Budget bar:</div>
-
+        <div class="save">EXPENDITURE: <br />SAVINGS: <br /> BUDGET BAR:</div>
+<div class="progress-bar">
+    <div class="progress-bar-fill" id="progress"></div>
+</div>
+<br>
         <ul class="tasks">
             <li>
                 💰
@@ -28,28 +55,84 @@
             </li>
             <li>
                 ❤️‍🩹
-                <a href=""> Life Insurances</a>
+                <a href="lifeinsurance.html" target="_blank"> Life Insurances</a>
             </li>
             <li>
                 💸
-                <a href=""> Investments</a>
+                <a href="investment.html" target="_blank"> Investments</a>
             </li>
             <li>
                 🪙
-                <a href=""> Gold Loan</a>
+                <a href="goldloan.html" target="_blank"> Gold Loan</a>
             </li>
-            <!-- <li></li>
-      <li></li> -->
         </ul>
     </span>
     <script>
-       const name = localStorage.getItem('name');
-       const budget = localStorage.getItem('budget');
-       const duration = localStorage.getItem('duration');
-       document.getElementById('name').textContent = name;
-       document.getElementById('budget').textContent = budget;
-       document.getElementById('duration').textContent = duration;                                
+        
+        const name = localStorage.getItem('name');
+        const budget = localStorage.getItem('budget');
+        const duration = localStorage.getItem('duration');
+        document.getElementById('name').textContent = name;
+        document.getElementById('budget').textContent = budget;
+        document.getElementById('duration').textContent = duration; 
+        let expen= prompt("WHAT IS YOUR EXPENDITURE?");
+        if(expen>0 && expen<=budget){
+         function answe1(expe){
+                 let sav = (budget-expe);
+                let heading = document.querySelector(".save");
+                 heading.innerHTML = " EXPENDITURE: " + expe+"                  "+" SAVINGS: " + sav+"                   BUDGET BAR: ";
+                let per = ((expe * 100) / budget);
+                function updateProgress(progressPercentage) {
+                    const progressBarFill = document.getElementById('progress');
+                    progressBarFill.style.width = `${progressPercentage}%`;
+                }
+            
+                updateProgress(per);
+            }
+        
+            answe1(expen);
+        }
+        else if(expen<0) {
+            alert("INVALID INPUT.TRY AGAIN.");
+            let expen = prompt("WHAT IS YOUR EXPENDITURE?");
+            function answe1(expe) {
+                let sav = (budget - expe);
+                let heading = document.querySelector(".save");
+                heading.innerHTML = " EXPENDITURE: " + expe + "                  " + " SAVINGS: " + sav + "                   BUDGET BAR: ";
+                let per = ((expe * 100) / budget);
+                function updateProgress(progressPercentage) {
+                    const progressBarFill = document.getElementById('progress');
+                    progressBarFill.style.width = `${progressPercentage}%`;
+                }
+
+                updateProgress(per);
+            }
+
+            answe1(expen);
+        }
+        else if(expen>0){
+                alert("OOPS! YOU HAVE SPENT A LOT");
+                let expen = prompt("WHAT IS YOUR EXPENDITURE?");
+                function answe1(expe) {
+                    let sav = (budget - expe);
+                    let heading = document.querySelector(".save");
+                    heading.innerHTML = " EXPENDITURE: " + expe + "                  " + " SAVINGS: " + sav + "                   BUDGET BAR: ";
+                    let per = ((expe * 100) / budget);
+                    function updateProgress(progressPercentage) {
+                        const progressBarFill = document.getElementById('progress');
+                        progressBarFill.style.width = `${progressPercentage}%`;
+                    }
+
+                    updateProgress(per);
+                }
+
+                answe1(expen);
+            }
+            function answer() {
+                    window.open("thank you.html", '_blank')
+                }
+                let element = document.querySelector("button");
+                element.addEventListener("click", answer);                           
     </script>
 </body>
-   
 </html>
